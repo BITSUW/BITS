@@ -251,23 +251,43 @@ a { color: inherit; }
 
 /* ── Events ───────────────────────────────────────────────────────────── */
 
-.event-next {
-  border: 2px solid var(--sun);
-  padding: clamp(1.5rem, 4vw, 2.5rem);
-  margin-bottom: 2.75rem;
-  max-width: 46rem;
+.event-note { font-size: 1.0625rem; margin-bottom: 0; max-width: 52ch; }
+
+.event-instagram { margin-top: clamp(1.75rem, 4vw, 2.5rem); }
+
+.event-list {
+  margin-top: clamp(2.5rem, 6vw, 3.5rem);
+  padding-top: clamp(2rem, 5vw, 2.75rem);
+  border-top: 1px solid rgba(255,255,255,.14);
 }
 
-.section-dark .event-flag { color: var(--sun); font-size: .9375rem; margin-bottom: .4rem; }
+/* ── Email signup ─────────────────────────────────────────────────────── */
 
-.event-name { font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: 1.4rem; }
+.section-signup { background: var(--wash); border-bottom: 1px solid var(--rule); }
 
-.event-meta { display: flex; flex-wrap: wrap; gap: 1.75rem; margin: 0 0 1.4rem; }
-.event-meta div { min-width: 8rem; }
-.event-meta dt { color: var(--sky); font-size: .875rem; margin-bottom: .15rem; }
-.event-meta dd { margin: 0; font-size: 1.05rem; font-family: var(--display); font-weight: 500; }
+.signup-form {
+  display: flex; flex-wrap: wrap; align-items: end; gap: 1.25rem;
+  margin-top: clamp(1.75rem, 4vw, 2.5rem);
+  max-width: 40rem;
+}
 
-.event-note { font-size: .9375rem; margin-bottom: 1.6rem; }
+.signup-field { display: flex; flex-direction: column; gap: .4rem; flex: 1 1 14rem; }
+
+.signup-field label {
+  font-family: var(--display); font-size: .875rem; font-weight: 500; color: var(--grey);
+}
+
+.signup-field input {
+  font: inherit; font-size: 1rem;
+  padding: .7rem .85rem;
+  border: 2px solid var(--ink);
+  background: var(--paper); color: var(--ink);
+}
+.signup-field input:focus-visible { outline-offset: 2px; }
+
+.signup-form .btn { flex: 0 0 auto; }
+
+.signup-note { margin-top: 1rem; font-size: .875rem; color: var(--grey); }
 
 /* ── Team ─────────────────────────────────────────────────────────────── */
 

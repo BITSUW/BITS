@@ -34,9 +34,15 @@ the DNS at GitHub.
 
 Everything is in `index.html`, marked with comment banners for each section.
 
-**Next event** — find `<article class="event event-next">` and update the title, the
-`<time datetime="YYYY-MM-DD">`, the time, and the room. Keep the `datetime` attribute in
-ISO format so it stays machine-readable.
+**Next event** — there's no hardcoded date/time/room card anymore. The Events section opens
+straight into the Instagram feed, with a line of text explaining that's where meeting details
+get posted. To change that wording, edit the `<p class="event-note">` inside
+`<div class="event-instagram">`.
+
+**Guest speaker interest form** — the button in "Get in touch" (`#contact`) links to the same
+Google Form used for guest speaker / partnership inquiries:
+`https://forms.gle/AE6JBFkrTckZeVzV9`. If that form ever changes, update the `href` on that
+button.
 
 **Executives** — each person is one `<li class="member">`. Copy an existing block to add
 someone. The `member-mark` div holds their initials; if you'd rather use photos, replace
@@ -79,7 +85,9 @@ Fonts in the `<head>`.
 
 ## Instagram feed
 
-The "Latest from Instagram" section (`#instagram` in `index.html`) uses an
+The Instagram feed lives inside the Events section now (`#instagram` in `index.html` is a
+subsection of `#events`, not its own page section) — it's the first thing in Events, since
+Instagram is the source of truth for meeting details. It uses an
 [Elfsight](https://elfsight.com) widget to auto-pull recent posts from `@bitsatuw`. It's two
 lines dropped straight in:
 
@@ -103,6 +111,40 @@ inside `.insta-embed` in `index.html`.
 **Free-tier limits:** Elfsight's free plan caps impressions per month and adds a small
 "Powered by Elfsight" badge to the widget. If that's a problem, either upgrade the plan or
 swap to another provider (SnapWidget, Behold.so) using the same drop-in pattern.
+
+## Email list signup
+
+There's a "Join our email list" section (`#email-list` in `index.html`) with a name + email
+form, but **it isn't wired to anything yet** — right now submitting it does nothing. The
+`<form>` tag has a `TODO` comment right above it in the HTML with the same instructions
+below. Pick whichever of these fits how BITS wants to manage the list:
+
+**Option A — Google Form (free, easiest if you already use Google Forms):**
+1. Create a Google Form with a Name and an Email question.
+2. Open the live form, right-click → "Inspect" (or use the form's prefilled-link feature) to
+   find each field's `entry.XXXXXXXXX` ID, and the form's `formResponse` submit URL — it looks
+   like `https://docs.google.com/forms/d/e/FORM_ID/formResponse`.
+3. In `index.html`, set the `<form>` tag's `action` to that URL, and change `name="name"` /
+   `name="email"` on the two inputs to the matching `entry.XXXXXXXXX` values.
+4. Google Forms will reject a normal redirect back to your page, so also add
+   `target="hidden_iframe"` to the `<form>` tag and follow Google's standard
+   ["submit a form without leaving the page"](https://www.google.com/search?q=google+form+submit+hidden+iframe)
+   pattern if you want visitors to stay on your site after signing up.
+
+**Option B — An email service (Mailchimp, ConvertKit, etc.):**
+Most of these give you a ready-made embed snippet (its own `<form>` with its own field names
+and action URL) when you create a signup form in their dashboard. Delete the placeholder
+`<form>...</form>` block entirely and paste theirs in its place — the surrounding
+`.signup-form`-styled look will be theirs to restyle, not this site's CSS.
+
+**Option C — Formspree (no backend, minimal setup):**
+1. Sign up free at [formspree.io](https://formspree.io) and create a form to get a URL like
+   `https://formspree.io/f/yourFormID`.
+2. Set the `<form>` tag's `action` to that URL and leave `method="POST"` as-is. The existing
+   `name="name"` / `name="email"` fields work with no other changes.
+
+Whichever option, submissions should land in a place someone actually checks — a spreadsheet,
+an inbox, or your ESP's dashboard — so confirm that before pointing people at the live page.
 
 ## Notes
 

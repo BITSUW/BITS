@@ -34,8 +34,8 @@
       <a href="#about">About</a>
       <a href="#events">Events</a>
       <a href="#team">Team</a>
-      <a href="#instagram">Instagram</a>
-      <a class="nav-cta" href="#join">Join BITS</a>
+      <a href="#contact">Contact</a>
+      <a class="nav-cta" href="#email-list">Join our list</a>
     </nav>
   </div>
 </header>
@@ -51,7 +51,7 @@
       <p class="hero-sub">A student-run organization at the University of Washington for people
         who want to work where business and technology meet.</p>
       <div class="hero-actions">
-        <a class="btn btn-solid" href="https://discord.gg/CEKbdgX9" target="_blank" rel="noopener">Join the Discord</a>
+        <a class="btn btn-solid" href="#email-list">Join our email list</a>
         <a class="btn btn-ghost" href="#events">See the next meeting</a>
       </div>
     </div>
@@ -77,8 +77,9 @@
         <p>BITS is a student-run organization at the University of Washington dedicated to bridging
           the gap between business and technology. We equip students with the technical, analytical,
           and professional skills needed to succeed in technology-driven industries.</p>
-        <p>You don't need a technical background to join. Some of our members write SQL every day;
-          others are opening Excel for the first time. Both belong here.</p>
+        <p>Every event is open to any UW student — no application, no prerequisites, no
+          technical background required. Whether you already write SQL for fun or you've
+          never opened a spreadsheet, you're welcome to just show up.</p>
       </div>
 
       <ul class="pillars">
@@ -106,23 +107,56 @@
     <div class="wrap">
       <h2 class="section-title">Events</h2>
 
-      <article class="event event-next">
-        <p class="event-flag">Next meeting</p>
-        <h3 class="event-name">Topic to be announced</h3>
-        <dl class="event-meta">
-          <div><dt>Date</dt><dd><time datetime="2026-05-12">Tuesday, May 12, 2026</time></dd></div>
-          <div><dt>Time</dt><dd>5:30 – 6:30 PM</dd></div>
-          <div><dt>Place</dt><dd>Founders Hall 370</dd></div>
-        </dl>
-        <p class="event-note">Meetings are open to every UW student. Drop in, no sign-up needed.</p>
-        <a class="btn btn-solid" href="https://forms.gle/AE6JBFkrTckZeVzV9" target="_blank" rel="noopener">RSVP</a>
-      </article>
+      <div class="event-instagram" id="instagram">
+        <p class="event-note">Follow <a href="https://www.instagram.com/bitsatuw/" target="_blank" rel="noopener">@bitsatuw</a> — that's where we post each meeting's date, time,
+          and location, plus recap photos and internship leads. Every meeting is open to any
+          UW student, no major, background, or experience required. Show up, no sign-up needed.</p>
+        <div class="insta-embed">
+          <script src="https://elfsightcdn.com/platform.js" async></script>
+          <div class="elfsight-app-6d069763-a333-477a-80e8-5a832ea95518" data-elfsight-app-lazy></div>
+        </div>
+      </div>
 
       <div class="event-list">
         <h3 class="sub-title">What a meeting looks like</h3>
         <p>A short workshop or guest talk, then open time to ask questions and meet the people in the
-          room — executives, guests, and members working on the same problems you are.</p>
+          room — executives, guests, and members working on the same problems you are. Whether
+          you've never opened a terminal or you already have an internship, you're welcome here.</p>
       </div>
+    </div>
+  </section>
+
+  <!-- ── Email list ───────────────────────────────────── -->
+  <section class="section section-signup" id="email-list">
+    <div class="wrap">
+      <h2 class="section-title">Join our email list</h2>
+      <p class="lede">Email is now our main channel for meeting announcements, guest speaker
+        notices, and internship leads — the fastest way to stay in the loop.</p>
+
+      <!--
+        TODO (BITS exec): this form isn't wired to anything yet — it just holds the layout.
+        Pick one option below and drop the real fields/action in. See the README section
+        "Email list signup" for step-by-step instructions for each option.
+
+        Option A — Google Form: replace the <form> tag's action with your form's
+          "formResponse" URL, and change each input's name to the matching entry.NNNNNN ID.
+        Option B — Mailchimp / another ESP embed: replace this whole <form> with the
+          embed code your provider gives you.
+        Option C — Formspree (no backend needed): replace the action URL with
+          https://formspree.io/f/yourFormID and this form works as-is.
+      -->
+      <form class="signup-form" action="#" method="POST">
+        <div class="signup-field">
+          <label for="signup-name">Name</label>
+          <input id="signup-name" name="name" type="text" autocomplete="name" required>
+        </div>
+        <div class="signup-field">
+          <label for="signup-email">UW email</label>
+          <input id="signup-email" name="email" type="email" autocomplete="email" required>
+        </div>
+        <button class="btn btn-solid" type="submit">Sign up</button>
+      </form>
+      <p class="signup-note">We'll only use this to send BITS updates. No spam, unsubscribe anytime.</p>
     </div>
   </section>
 
@@ -134,54 +168,46 @@
 
       <ul class="team">
         <li class="member">
-          <div class="member-mark" aria-hidden="true">MK</div>
-          <h3>Michael Khammavongsa</h3>
-          <p class="member-role">President</p>
-          <a href="mailto:mgkmk3@uw.edu">mgkmk3@uw.edu</a>
-        </li>
-        <li class="member">
-          <div class="member-mark" aria-hidden="true">IZ</div>
-          <h3>Ina Zhen</h3>
-          <p class="member-role">Vice President</p>
-          <a href="mailto:inazhen@uw.edu">inazhen@uw.edu</a>
-        </li>
-        <li class="member">
-          <div class="member-mark" aria-hidden="true">DG</div>
-          <h3>Demetris Gavrielides</h3>
-          <p class="member-role">Director of Outreach</p>
-          <a href="mailto:demgav@uw.edu">demgav@uw.edu</a>
-        </li>
-        <li class="member">
           <div class="member-mark" aria-hidden="true">AL</div>
           <h3>Aasha Lee</h3>
-          <p class="member-role">Director of Marketing</p>
-          <a href="mailto:leeaas05@uw.edu">leeaas05@uw.edu</a>
+          <p class="member-role">President</p>
+          <a href="mailto:Leeaas05@uw.edu">Leeaas05@uw.edu</a>
         </li>
         <li class="member">
           <div class="member-mark" aria-hidden="true">AR</div>
           <h3>Aditya Rana</h3>
-          <p class="member-role">Director of Technology</p>
+          <p class="member-role">Vice President</p>
           <a href="mailto:arana297@uw.edu">arana297@uw.edu</a>
         </li>
         <li class="member">
-          <div class="member-mark" aria-hidden="true">KP</div>
-          <h3>Katelyn Phung</h3>
-          <p class="member-role">Intern</p>
-          <a href="mailto:ktphung1@uw.edu">ktphung1@uw.edu</a>
+          <div class="member-mark" aria-hidden="true">MW</div>
+          <h3>Megan Wong</h3>
+          <p class="member-role">Director of Outreach</p>
+          <a href="mailto:mwong06@uw.edu">mwong06@uw.edu</a>
+        </li>
+        <li class="member">
+          <div class="member-mark" aria-hidden="true">MT</div>
+          <h3>My Ta</h3>
+          <p class="member-role">Director of Marketing</p>
+          <a href="mailto:myta07@uw.edu">myta07@uw.edu</a>
+        </li>
+        <li class="member">
+          <div class="member-mark" aria-hidden="true">DG</div>
+          <h3>Demetris Gavrielides</h3>
+          <p class="member-role">Director of Technology</p>
+          <a href="mailto:demgav@uw.edu">demgav@uw.edu</a>
         </li>
       </ul>
     </div>
   </section>
 
-  <!-- ── Instagram ────────────────────────────────────── -->
-  <section class="section" id="instagram">
+  <!-- ── Contact ──────────────────────────────────────── -->
+  <section class="section section-dark" id="contact">
     <div class="wrap">
-      <h2 class="section-title">Latest from Instagram</h2>
-      <p class="lede">Follow <a href="https://www.instagram.com/bitsatuw/" target="_blank" rel="noopener">@bitsatuw</a> for event announcements, recap photos, and internship leads.</p>
-      <div class="insta-embed">
-        <script src="https://elfsightcdn.com/platform.js" async></script>
-        <div class="elfsight-app-6d069763-a333-477a-80e8-5a832ea95518" data-elfsight-app-lazy></div>
-      </div>
+      <h2 class="section-title">Get in touch</h2>
+      <p class="lede">Know someone who'd be a great guest speaker, or want to partner with BITS?
+        Tell us about it.</p>
+      <a class="btn btn-solid" href="https://forms.gle/AE6JBFkrTckZeVzV9" target="_blank" rel="noopener">Guest speaker interest form</a>
     </div>
   </section>
 
@@ -189,13 +215,13 @@
   <section class="join" id="join">
     <div class="wrap">
       <h2>Come to the next one</h2>
-      <p>Show up to a meeting, or find us online first. Either way, start with the Discord — that's
+      <p>Show up to a meeting, or find us online first. Start with our email list — that's
         where announcements, resources, and internship leads go out.</p>
       <div class="join-links">
-        <a href="https://discord.gg/CEKbdgX9" target="_blank" rel="noopener">Discord</a>
+        <a href="#email-list">Email list</a>
         <a href="https://www.instagram.com/bitsatuw/" target="_blank" rel="noopener">Instagram</a>
         <a href="https://www.linkedin.com/company/uwbits" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="mailto:demgav@uw.edu">Email us</a>
+        <a href="https://discord.gg/CEKbdgX9" target="_blank" rel="noopener">Discord</a>
       </div>
     </div>
   </section>
