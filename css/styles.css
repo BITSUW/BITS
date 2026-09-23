@@ -265,27 +265,7 @@ a { color: inherit; }
 
 .section-signup { background: var(--wash); border-bottom: 1px solid var(--rule); }
 
-.signup-form {
-  display: flex; flex-wrap: wrap; align-items: end; gap: 1.25rem;
-  margin-top: clamp(1.75rem, 4vw, 2.5rem);
-  max-width: 40rem;
-}
-
-.signup-field { display: flex; flex-direction: column; gap: .4rem; flex: 1 1 14rem; }
-
-.signup-field label {
-  font-family: var(--display); font-size: .875rem; font-weight: 500; color: var(--grey);
-}
-
-.signup-field input {
-  font: inherit; font-size: 1rem;
-  padding: .7rem .85rem;
-  border: 2px solid var(--ink);
-  background: var(--paper); color: var(--ink);
-}
-.signup-field input:focus-visible { outline-offset: 2px; }
-
-.signup-form .btn { flex: 0 0 auto; }
+.signup-btn { margin-top: clamp(1.75rem, 4vw, 2.5rem); }
 
 .signup-note { margin-top: 1rem; font-size: .875rem; color: var(--grey); }
 
